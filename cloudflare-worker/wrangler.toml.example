@@ -1,0 +1,12 @@
+name = "gaetan-private-documents"
+main = "worker.js"
+compatibility_date = "2026-10-04"
+workers_dev = false
+
+[[r2_buckets]]
+binding = "DOCUMENTS"
+bucket_name = "gaetan-private-documents"
+
+# Variables non secrètes :
+# ACCESS_TEAM_DOMAIN = "votre-equipe.cloudflareaccess.com"
+# ACCESS_AUD = "Audience (AUD) de l'application Cloudflare Access"
