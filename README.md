@@ -6,4 +6,4 @@ Mini-site statique destiné à GitHub Pages. La page présente le CV en ligne et
 
 Le site est prêt pour GitHub Pages. Aucun document administratif n'est inclus dans ce dépôt.
 
-Les documents privés devront être chiffrés localement avant toute publication ou transmis sur demande par un canal sécurisé.
+Les originaux restent obligatoirement dans `private-source/`, dossier ignoré par Git. Le script `node tools/encrypt-vault.mjs` crée uniquement des fichiers chiffrés dans `vault/`, lisibles sur le site avec le code d’accès. Le mot de passe n’est ni enregistré ni publié.
