@@ -1,0 +1,12 @@
+# Never commit original administrative documents or passwords.
+private-source/
+*.pdf
+*.docx
+*.jpg
+*.jpeg
+*.png
+!assets/cv-qr.png
+.env
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
