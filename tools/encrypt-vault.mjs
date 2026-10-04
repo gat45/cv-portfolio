@@ -24,7 +24,7 @@ function encrypt(data, password) {
   const key = pbkdf2Sync(password, salt, iterations, 32, 'sha256');
   const cipher = createCipheriv('aes-256-gcm', key, iv);
   const ciphertext = Buffer.concat([cipher.update(data), cipher.final()]);
-  return Buffer.concat([salt, iv, cipher.getAuthTag(), ciphertext]);
+  return Buffer.concat([salt, iv, ciphertext, cipher.getAuthTag()]);
 }
 const password = await passwordFromUser();
 if (password.length < 10) throw new Error('Choisissez un mot de passe d’au moins 10 caractères.');
